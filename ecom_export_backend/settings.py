@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'apps.inquiries',
     'apps.payments',
     'apps.blog',
+    'apps.quotations',
 
     'django_extensions',
 ]
@@ -183,3 +184,20 @@ RAZORPAY_KEY_SECRET = config("RAZORPAY_KEY_SECRET")
 
 
 ###############Op###############################
+
+
+# Celery + Redis Config
+CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_RESULT_BACKEND = "redis://localhost:6379/0"
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'youremail@example.com'         # replace with your email
+EMAIL_HOST_PASSWORD = 'app password'      # or App Password
+DEFAULT_FROM_EMAIL = 'appname<youremail@example.com>'  # replace with your appname and email 
