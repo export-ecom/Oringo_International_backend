@@ -12,6 +12,7 @@ urlpatterns = [
     path("api/orders/", include("apps.orders.urls")),
     path("api/payments/", include("apps.payments.urls")),
     path('api/', include('apps.blog.urls')),
+    path("api/quotations/", include("apps.quotations.urls")),
 
 
     path("api/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
