@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'apps.quotations',
 
     'django_extensions',
+    'custom_admin'
 ]
 
 MIDDLEWARE = [

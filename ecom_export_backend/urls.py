@@ -17,6 +17,8 @@ urlpatterns = [
 
     path("api/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/logout/", TokenBlacklistView.as_view(), name="logout"),
+    path('api/admin/', include('custom_admin.urls')),
+
 
 
 ]
